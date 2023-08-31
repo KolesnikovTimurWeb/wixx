@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover shrink-to-fit=no user-scalable=no">
+   <title>Diagnostic</title>
+   <meta name="format-detection" content="telephone=no">
+   <meta name="format-detection" content="address=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="description" content="{{ $description ?? '' }}">
+   <meta name="keywords" content="ключевые слова">
+
+   <meta name="referrer" content="strict-origin">
+
+   <!-- ЗАПРЕТ ИНДЕКСАЦИИ, УДАЛИТЬ НА БОЕВОМ СЕРВЕРЕ!!!-->
+   <meta name="robots" content="noindex, nofollow, noimageindex">
+
+   <!-- РАССКОМЕНТИРОВАТЬ НА БОЕВОМ СЕРВЕРЕ-->
+
+   <!-- <meta name="robots" content="index,follow" />-->
+
+   <!-- CSS + Crytical-->
+   <link rel="stylesheet" href="css/diagnoctic.css">
+   <link rel="stylesheet" href="css/style.css">
+
+
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+   <main>
+
+      <!--start header -->
+      <div class="loader-wrap" id="loaderWrap">
+         <div class="loader">
+            <img class="loader__gif" src="img/loader/ezgif-3-63bffaecb1.gif"
+               alt=""><!--img.loader__img(src='img/loader/3333.svg' alt='')-->
+         </div>
+      </div>
+
+      <div class="nav navbar navbar-expand-xl navbar-light navbar--simple navbarSimple" id="weady-nav-white">
+         <div class="d-flex justify-content-between container">
+            <a class="navbar-brand"
+               href="/"><!--include ../../../img/logo/logo-green-big.svg--><!--img(alt="logo" src="img/logo/logo-green-big.webp" width="206")-->
+               <img alt="logo" src="img/logo/weady-green-logo.svg"
+                  width="206"><!--img(alt="logo" src="img/logo/weady-green-logo.svg.webp" width="206")-->
+            </a>
+            <div class="navbar-toggler-wrap">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+               <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                  <div class="nav-item-wrap navItemWrap">
+                     <li class="nav-item weady-nav-mx navLinkWrap">
+                        <a class="nav-link navLink" aria-current="page" href="#">Start</a>
+                        <div class="nav-link__arr">
+                           <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                 fill="#FB6D33" />
+                           </svg>
+                        </div>
+                     </li>
+                  </div>
+                  <div class="nav-item-wrap navItemWrap">
+                     <li class="nav-item weady-nav-mx navLinkWrap">
+                        <a class="nav-link navLink" href="#">Products</a>
+                        <div class="nav-link__arr">
+                           <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                 fill="#FB6D33" />
+                           </svg>
+                        </div>
+                     </li>
+                  </div>
+                  <div class="nav-item-wrap">
+                     <li class="nav-item weady-nav-mx">
+                        <a class="nav-link" aria-current="page" href="#">Pricing</a>
+                     </li>
+                  </div>
+                  <div class="nav-item-wrap navItemWrap">
+                     <li class="nav-item weady-nav-mx navLinkWrap">
+                        <a class="nav-link navLink" href="#">More</a>
+                        <div class="nav-link__arr">
+                           <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                 fill="#FB6D33" />
+                           </svg>
+                        </div>
+                     </li>
+                  </div>
+
+               </ul>
+               <form class="d-flex">
+                  <button class="btn btn-outline-light mx-2 px-4 px-lg-4 px-xl-5 standart-height-button">Login</button>
+                  <button class="btn orange-button ms-2 px-4 px-lg-4 px-xl-5 standart-height-button">Start free
+                     trial</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="main-nav__bg mainNavBg"></div>
+      <div class="main-nav-wrap mainNavWrap">
+         <div class="main-nav">
+            <div class="nav navbar navbar-expand-xl navbar-light navbar--nav-drop navbarNavDrop" id="weady-nav">
+               <div class="d-flex justify-content-between container">
+                  <a class="navbar-brand"
+                     href="/"><!--include ../../../img/logo/logo-green-big.svg--><!--img(alt="logo" src="img/logo/logo-green-big.webp" width="206")-->
+                     <img alt="logo"
+                        src="{{global_asset('assets/landlord/new_frontend/img/logo/weady-green-logo.svg')}}"
+                        width="206"><!--img(alt="logo" src="img/logo/weady-green-logo.svg.webp" width="206")-->
+                  </a>
+                  <div class="navbar-toggler-wrap navbarTogglerWrap">
+                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+
+                        <input type="hidden" id="xImage"
+                           value="{{ asset('assets/landlord/new_frontend/img/ico/x.svg') }}">
+                        <input type="hidden" id="tab2Image"
+                           value="{{ asset('assets/landlord/new_frontend/img/ico/tab-2.svg') }}">
+                        <input type="hidden" id="tabImage"
+                           value="{{ asset('assets/landlord/new_frontend/img/ico/tab.svg') }}">
+
+
+                     </button>
+                  </div>
+                  <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                     <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                        <div class="nav-item-wrap navItemWrap">
+                           <li class="nav-item weady-nav-mx navLinkWrap">
+                              <a class="nav-link navLink" aria-current="page" href="#">Start</a>
+                              <div class="nav-link__arr">
+                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                       fill="#FB6D33" />
+                                 </svg>
+                              </div>
+                           </li>
+                           <div class="main-nav__drop-wrap mainNavDropWrap">
+                              <div class="main-nav__drop container main-nav__drop--panel">
+                                 <div class="main-nav__drop-menu">
+                                    <div class="main-nav__drop-content">
+                                       <div class="main-nav__drop-col-wrap">
+                                          <div class="main-nav__drop-col">
+                                             <div class="main-nav__drop-headline">Weady package:</div>
+                                             <div class="main-nav__drop-item-wrap">
+                                                <div class="main-nav__drop-item">
+                                                   <a class="main-nav__drop-title" href="one_page.html">Business</a>
+                                                   <div class="main-nav__drop-desc">For companies <b>without</b> online
+                                                      payment acceptance</div>
+                                                </div>
+                                             </div>
+                                             <div class="main-nav__drop-item-wrap">
+                                                <div class="main-nav__drop-item">
+                                                   <a class="main-nav__drop-title" href="bussiness.html">Business Plus
+                                                   </a>
+                                                   <div class="main-nav__drop-desc">For companies <b>with</b> online
+                                                      payment acceptance</div>
+                                                </div>
+                                             </div>
+                                             <div class="main-nav__drop-item-wrap">
+                                                <div class="main-nav__drop-item">
+                                                   <a class="main-nav__drop-title" href="econom.html">E-commerce</a>
+                                                   <div class="main-nav__drop-desc">Online store for <b>physical</b> and
+                                                      <b>digital</b> products
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-col-wrap">
+                                          <div class="main-nav__drop-col">
+                                             <div class="main-nav__drop-headline">Learn for free:</div>
+                                             <div class="main-nav__drop-item-wrap">
+                                                <div class="main-nav__drop-item">
+                                                   <a class="main-nav__drop-title" href="demo.html">Fast Demo</a>
+                                                   <div class="main-nav__drop-desc">Learn the features in 10 minutes
+                                                      demo
+                                                      video</div>
+                                                </div>
+                                             </div>
+                                             <div class="main-nav__drop-item-wrap">
+                                                <div class="main-nav__drop-item">
+                                                   <a class="main-nav__drop-title" href="course.html">Started Course</a>
+                                                   <div class="main-nav__drop-desc">A training course that will make you
+                                                      a
+                                                      professional</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="main-nav__drop-panel">
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/2.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="variants.html">All Modules</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/pepicons-pop_people-circle.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="community.html">Our community</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/knowledge.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="guides.html">Knowledge base</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/streamline_interface-help-customer-support-2-customer-headphones-headset-help-microphone-phone-person-support.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="support.html">Support Service</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/fluent-mdl2_documentation.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="docs.html">Documentation</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                    <div class="main-nav__drop-panel-item">
+                                       <div class="main-nav__drop-panel-head">
+                                          <img class="main-nav__drop-panel-ico"
+                                             src="{{global_asset('assets/landlord/new_frontend/img/support_contact/jam_blogger-square.svg')}}"
+                                             alt="">
+                                          <a class="main-nav__drop-panel-title" href="blog.html">Our Blog</a>
+                                       </div>
+                                       <!--.main-nav__drop-panel-desc Creative control and flexibility without code-->
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="nav-item-wrap navItemWrap">
+                           <li class="nav-item weady-nav-mx navLinkWrap">
+                              <a class="nav-link navLink" href="#">Products</a>
+                              <div class="nav-link__arr">
+                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                       fill="#FB6D33" />
+                                 </svg>
+                              </div>
+                           </li>
+                           <div class="main-nav__drop-wrap mainNavDropWrap">
+                              <div class="main-nav__drop container">
+                                 <div class="main-nav__drop-menu">
+                                    <div class="main-nav__drop-headline">Products:</div>
+                                    <div class="main-nav__drop-content">
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="builder.html">AI Website Builder</a>
+                                             <div class="main-nav__drop-desc">Create a functional website or online
+                                                store
+                                                in a few clicks</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Website Assistant</a>
+                                             <div class="main-nav__drop-desc">AI consultant to your site trained on your
+                                                data</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Support Service</a>
+                                             <div class="main-nav__drop-desc">Create AI support bot in client-friendly
+                                                messengers</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI SEO Checker</a>
+                                             <div class="main-nav__drop-desc">Analyze and find errors and get
+                                                recommendations.
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Blog Content</a>
+                                             <div class="main-nav__drop-desc">Generate article and automate SEO
+                                                promotion
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Marketing</a>
+                                             <div class="main-nav__drop-desc">Automate marketing from first touch to
+                                                purchase</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Massanger</a>
+                                             <div class="main-nav__drop-desc">Control all your communication in one
+                                                place
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">AI Team</a>
+                                             <div class="main-nav__drop-desc">Personal AI team chats trained on your
+                                                data
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">Weady CRM</a>
+                                             <div class="main-nav__drop-desc">Process requests using CRM and automate
+                                                actions</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="nav-item-wrap">
+                           <li class="nav-item weady-nav-mx">
+                              <a class="nav-link" aria-current="page" href="pricing.html">Pricing</a>
+                           </li>
+                        </div>
+                        <div class="nav-item-wrap navItemWrap">
+                           <li class="nav-item weady-nav-mx navLinkWrap">
+                              <a class="nav-link navLink" href="#">More</a>
+                              <div class="nav-link__arr">
+                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M1.77539 -8.74228e-07L11.7754 10L1.77539 20L0.000391162 18.225L8.22539 10L0.0003926 1.775L1.77539 -8.74228e-07Z"
+                                       fill="#FB6D33" />
+                                 </svg>
+                              </div>
+                           </li>
+                           <div class="main-nav__drop-wrap mainNavDropWrap">
+                              <div class="main-nav__drop container">
+                                 <div class="main-nav__drop-menu">
+                                    <div class="main-nav__drop-headline">More:</div>
+                                    <div class="main-nav__drop-content">
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="about.html">About Us</a>
+                                             <div class="main-nav__drop-desc">Get to know our team and our global vision
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="">Press</a>
+                                             <div class="main-nav__drop-desc">Explore our brand voice for generating
+                                                quality content</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="community.html">Our community</a>
+                                             <div class="main-nav__drop-desc">Join our social networking community and
+                                                stay
+                                                in touch</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="partner_program.html">Affiliate
+                                                Program</a>
+                                             <div class="main-nav__drop-desc">Earn up to 30% for life by recommending
+                                                our
+                                                product</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="reviews.html">Reviews</a>
+                                             <div class="main-nav__drop-desc">Our customers will say more about us than
+                                                we
+                                                will</div>
+                                          </div>
+                                       </div>
+                                       <div class="main-nav__drop-item-wrap">
+                                          <div class="main-nav__drop-item">
+                                             <a class="main-nav__drop-title" href="blog.html">Our Blog</a>
+                                             <div class="main-nav__drop-desc">How to properly and effectively integrate
+                                                AI
+                                                into your business</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <li class="nav-item dropdown weady-nav-mx" data-da=".navbarTogglerWrap,1200,0">
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-expanded="false">{{ current(explode('_', get_user_lang()))
+                              }}</a>
+
+                        </li>
+                     </ul>
+                     <form class="d-flex">
+                        <button
+                           class="btn btn-outline-light mx-2 px-4 px-lg-4 px-xl-5 standart-height-button">Login</button>
+                        <button class="btn orange-button ms-2 px-4 px-lg-4 px-xl-5 standart-height-button">Start free
+                           trial</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!--start end -->
+
+
+      <!-- Main Part -->
+      <section class="section global">
+         <div class="global-container container">
+            <div class="global-text">
+               <div class="global-buttons">
+                  <div class="global-button">
+                     <p>MARKETING</p>
+                  </div>
+                  <div class="global-button">
+                     <p>bussines</p>
+                  </div>
+                  <div class="global-button">
+                     <p>Ai tools</p>
+                  </div>
+               </div>
+               <img class="global-img-mobile" src="./img/diagnostic/global-text-icon.webp" alt="Individual 20-min AI
+                  business">
+               <h1>Individual 20-min AI
+                  business <img class="global-img-pc" src="./img/diagnostic/global-text-icon.webp" alt="Individual 20-min AI
+                  business"> diagnostics
+                  with an AI-instructor</h1>
+               <h2>Boost your business with AI-hacking formula and be a big fish from day one investing 10 min per day
+               </h2>
+               <a href="#"
+                  class="btn orange-button px-5 py-standart fw-700 standart-height-button adv-attr-button mt-3 position-relative tariff-hero__btn"
+                  style="z-index: 3;">Start free diagnostics</a>
+               <p>No credit card requared</p>
+            </div>
+
+            <div class="global-text-circle circle-down">
+               <img src="./img/diagnostic/global-circle-down.webp" alt="circle-down">
+            </div>
+            <div class="global-text-circle circle-right">
+               <img src="./img/diagnostic/global-circle-right.webp" alt="circle-right">
+            </div>
+         </div>
+
+
+      </section>
+      <section class="section diagnostics-must-be">
+         <div class="diagnostics-must-be-container container">
+
+            <div class="diagnostics-must-be-bacround">
+               <div>
+                  <video id="video" width="100%" height="100%" loop autoplay muted>
+                     <!-- Video files -->
+                     <source src="./img/diagnostic/mov_bbb.mp4" type="video/mp4" />
+                  </video>
+               </div>
+
+
+            </div>
+            <div class="diagnostics-must-be-text">
+               <h2 class="text-green-h2">This diagnostics <br> <span>must be</span> passed if...</h2>
+               <div class="diagnostics-must-be-number">
+                  <h4>01</h4>
+                  <p>There is a feeling of suboptimal development. It is necessary to adjust the strategy</p>
+               </div>
+               <div class="diagnostics-must-be-number">
+                  <h4>02</h4>
+                  <p>You want to be trained at Unites, but don't know where to start</p>
+               </div>
+               <div class="diagnostics-must-be-number">
+                  <h4>03</h4>
+                  <p>Your results are not proportional to your efforts</p>
+               </div>
+               <div class="diagnostics-must-be-number">
+                  <h4>04</h4>
+                  <p>You are bogged down in routine tasks and want to automate it with AI</p>
+               </div>
+            </div>
+
+
+         </div>
+      </section>
+      <section class="section hacking-formula">
+         <div class="hacking-formula text-green-h2 container">
+            <h2>Explore benefits of <span>AI-hacking formula</span> for your bussines</h2>
+            <h3>Tons of businesses with AI have already achieved impressive results!</h3>
+         </div>
+
+         <div class="hacking-formula-container container">
+            <div class="hacking-formula-orange">
+               <h2>Business before AI-hacking</h2>
+               <div class="hacking-formula-light">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                        <rect x="16.2344" y="6" width="2" height="14.474" rx="1" transform="rotate(45 16.2344 6)"
+                           fill="#FB6D33" />
+                        <rect x="6.00781" y="7.86133" width="2" height="14.474" rx="1"
+                           transform="rotate(-45 6.00781 7.86133)" fill="#FB6D33" />
+                     </svg>
+
+                  </div>
+                  <p>Expensive advertising budget</p>
+               </div>
+               <div class="hacking-formula-light">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                        <rect x="16.2344" y="6" width="2" height="14.474" rx="1" transform="rotate(45 16.2344 6)"
+                           fill="#FB6D33" />
+                        <rect x="6.00781" y="7.86133" width="2" height="14.474" rx="1"
+                           transform="rotate(-45 6.00781 7.86133)" fill="#FB6D33" />
+                     </svg>
+                  </div>
+
+                  <p>Time-consuming manual work</p>
+               </div>
+               <div class="hacking-formula-light">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                        <rect x="16.2344" y="6" width="2" height="14.474" rx="1" transform="rotate(45 16.2344 6)"
+                           fill="#FB6D33" />
+                        <rect x="6.00781" y="7.86133" width="2" height="14.474" rx="1"
+                           transform="rotate(-45 6.00781 7.86133)" fill="#FB6D33" />
+                     </svg>
+
+                  </div>
+                  <p>Falling behind competitor's Al strategies</p>
+               </div>
+               <div class="hacking-formula-light">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                        <rect x="16.2344" y="6" width="2" height="14.474" rx="1" transform="rotate(45 16.2344 6)"
+                           fill="#FB6D33" />
+                        <rect x="6.00781" y="7.86133" width="2" height="14.474" rx="1"
+                           transform="rotate(-45 6.00781 7.86133)" fill="#FB6D33" />
+                     </svg>
+                  </div>
+
+                  <p>Missed opportunities for innovative sales approaches</p>
+               </div>
+            </div>
+
+            <div class="hacking-formula-benefit">
+               <img src="./img/diagnostic/hacking-formula-benefit.svg" alt="AI-hacking formula for your bussines">
+            </div>
+
+            <div class="hacking-formula-green">
+               <h2>Business before AI-hacking</h2>
+               <div class="hacking-formula-dark">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g style="mix-blend-mode:lighten">
+                           <circle cx="12" cy="12" r="12" fill="#FB6D33" />
+                        </g>
+                        <path
+                           d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+
+                  <p>Reduced advertising costs</p>
+               </div>
+               <div class="hacking-formula-dark">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g style="mix-blend-mode:lighten">
+                           <circle cx="12" cy="12" r="12" fill="#FB6D33" />
+                        </g>
+                        <path
+                           d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+
+
+                  <p>Operations free of human error</p>
+               </div>
+               <div class="hacking-formula-dark">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g style="mix-blend-mode:lighten">
+                           <circle cx="12" cy="12" r="12" fill="#FB6D33" />
+                        </g>
+                        <path
+                           d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+
+                  <p>Automated Al-powered content generation</p>
+               </div>
+               <div class="hacking-formula-dark">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g style="mix-blend-mode:lighten">
+                           <circle cx="12" cy="12" r="12" fill="#FB6D33" />
+                        </g>
+                        <path
+                           d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                           fill="white" />
+                     </svg>
+                  </div>
+
+
+                  <p>Fast sales growth with Al-driven A/B tests</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section diagnostic">
+         <div class="diagnostic-container container">
+            <div class="diagnostic-text">
+               <h2>The diagnostic is based on the method of AI-hacking formula* </h2>
+               <p>AI-hacking formula helps you reach big fish levels from day one and save money on employees and
+                  freelancers by integrating AI</p>
+               <div class="diagnostic-social  diagnostic-social-pc">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="180" viewBox="0 0 27 180" fill="none">
+                        <rect x="13" width="1" height="180" rx="0.5" fill="white" />
+                        <circle cx="13.5" cy="82.5" r="13.5" fill="#FB6D33" />
+                     </svg>
+                  </div>
+                  <div class="diagnostic-social-text">
+                     <h3>AI-hacking formula*</h3>
+                     <p>This method has been used by many successful startups such as: Amazon, Facebook, Dropbox, Uber.
+                     </p>
+                     <div class="diagnostic-social-icons">
+                        <img src="./img/diagnostic/diagnostic-social-amazon.svg" alt="">
+                        <img src="./img/diagnostic/diagnostic-social-facebook.svg" alt="">
+                        <img src="./img/diagnostic/diagnostic-social-box.svg" alt="">
+                        <img src="./img/diagnostic/diagnostic-social-uber.svg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="diagnostic-img">
+               <img src="./img/diagnostic/diagnostic-img.webp" alt="">
+            </div>
+            <div class="diagnostic-social  diagnostic-social-mobile">
+               <svg xmlns="http://www.w3.org/2000/svg" width="27" height="180" viewBox="0 0 27 180" fill="none">
+                  <rect x="13" width="1" height="180" rx="0.5" fill="white" />
+                  <circle cx="13.5" cy="82.5" r="13.5" fill="#FB6D33" />
+               </svg>
+               <div class="diagnostic-social-text">
+                  <h3>AI-hacking formula*</h3>
+                  <p>This method has been used by many successful startups such as: Amazon, Facebook, Dropbox, Uber.
+                  </p>
+                  <div class="diagnostic-social-icons">
+                     <img src="./img/diagnostic/diagnostic-social-amazon.svg" alt="">
+                     <img src="./img/diagnostic/diagnostic-social-facebook.svg" alt="">
+                     <img src="./img/diagnostic/diagnostic-social-box.svg" alt="">
+                     <img src="./img/diagnostic/diagnostic-social-uber.svg" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section key6">
+         <div class="key6-container container">
+            <div class="div-none"></div>
+            <div class="key6-text">
+               <h2>As part of the diagnostics you will integrate AI in your business with an AI-instructor in 6 key
+                  blocks</h2>
+               <h3>Goal: Increase bussines sales online using AI</h3>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>01</h4>
+                     <h5>Strategy</h5>
+                  </div>
+                  <p>Take the test for six areas of business development: Product, Marketing, Sales, Finance, Service,
+                     Administration</p>
+               </div>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>02</h4>
+                     <h5>Packing</h5>
+                  </div>
+                  <p>From hundreds of options, let's choose 5-7 tools that are relevant to you for customer relations
+                     and team management</p>
+               </div>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>03</h4>
+                     <h5>Service</h5>
+                  </div>
+                  <p>Determine the relevant offers and traffic channels for each segment of the target audience. Detect
+                     the main segment to bet on</p>
+               </div>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>04</h4>
+                     <h5>Content</h5>
+                  </div>
+                  <p>Carry out a basic study of the competitive environment. Find out which traffic channels the main
+                     competitors use, their semantics, examples of ads and creative ideas</p>
+               </div>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>05</h4>
+                     <h5>Marketing</h5>
+                  </div>
+                  <p>Determining what types of products you can build into your product line to earn more from 30 to
+                     200% without increasing your marketing and staff costs</p>
+               </div>
+               <div class="key6-item">
+                  <div class="key6-number">
+                     <h4>06</h4>
+                     <h5>Social Network</h5>
+                  </div>
+                  <p>Identify 5 marketing bundles (traffic and converters) that will get you leads in the right
+                     quantity, quality and at a reasonable cost</p>
+               </div>
+
+               <a href="#"
+                  class="btn orange-button px-5 py-standart fw-700 standart-height-button adv-attr-button mt-3 position-relative "
+                  style="z-index: 3;">Start diagnostics</a>
+            </div>
+         </div>
+      </section>
+      <section class="section employees">
+         <div class="employees-title text-green-h2 container">
+            <h2>See how much money you save on <span>employees</span> monthly after AI diagnostics</h2>
+            <h3>Save <span>20.000$+ </span> per month and get more in sales with AI after fast diagnostics</h3>
+         </div>
+         <div class="employees-container container">
+            <div class="employees-img">
+               <img src="./img/diagnostic/employees-robot.webp" alt="employees-robot">
+            </div>
+            <div class="employees-block">
+               <div class="employees-light">
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Web-developer</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Sales Manager</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$1,5k</h4>
+                     <p>Designer</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Bussines Manager</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$1,5k</h4>
+                     <p>Copywriter</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$1,5k</h4>
+                     <p>Analyst</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>SEO-specialist</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>SMM Specialist</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Direct Manager</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Customer Service</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Marketer</p>
+                  </div>
+                  <div class="employees-item">
+                     <h4>$2k</h4>
+                     <p>Traffic Specialist</p>
+                  </div>
+               </div>
+               <div class="employees-dark">
+                  <img src="./img/diagnostic/employees-addition.webp" alt="">
+                  <p>And all this in your own AI-powered panel after 20 min free diagnostics</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section give-results">
+         <div class="give-results-container container">
+            <div class="give-results-text">
+               <h2>Identify 5-7 out of 1,000 AI tools that will <span>give results</span> specifically in your niche, in
+                  your region,
+                  in your situation?</h2>
+               <p>After diagnostics, key actions will be identified and prioritized. The missing competencies that need
+                  to be mastered to take the business and the team to the next level will be identified.</p>
+
+               <a href="#"
+                  class="btn orange-button px-5 py-standart fw-700 standart-height-button adv-attr-button mt-3 position-relative tariff-hero__btn"
+                  style="z-index: 3;">Start free diagnostics</a>
+            </div>
+            <div class="give-results-img">
+               <img src="./img/diagnostic/give-results-robot.webp" alt="Identify 5-7 out of 1,000 AI tools">
+            </div>
+
+            <div class="give-results-right">
+               <img src="./img/diagnostic/give-results-right.svg" alt="Addition">
+            </div>
+            <div class="give-results-left">
+               <img src="./img/diagnostic/give-results-left.svg" alt="Addition">
+            </div>
+         </div>
+      </section>
+      <section class="section uniquetech">
+         <div class="uniquetech-title container text-green-h2">
+            <h2>Unique technology <br>
+               <span>Learn + Integrate</span>
+
+            </h2>
+            <p>A diagnostics with an AI-instructor by a special methodology, after which you wil have a concrete result
+               on your hands, as well as ready to use your own AI-powered panel for next steps</p>
+         </div>
+         <div class="uniquetech-container container">
+            <div class="uniquetech-item">
+               <img src="./img/diagnostic/uniquetech-img-1-NEW.webp" alt="uniquetech-img">
+               <p>Individual approach depending on your level</p>
+            </div>
+            <div class="uniquetech-item">
+               <img src="./img/diagnostic/uniquetech-1-img.webp" alt="uniquetech-img">
+               <p>Ready-to-go tools and AI-powered strategy</p>
+            </div>
+            <div class="uniquetech-item">
+               <img src="./img/diagnostic/uniquetech-2-img.webp" alt="uniquetech-img">
+
+               <p>AI-powered platform
+                  for your bussines boost</p>
+            </div>
+            <div class="uniquetech-item">
+               <img src="./img/diagnostic/uniquetech-3-img.webp" alt="uniquetech-img">
+               <p>Personal real manager who helps and explains</p>
+            </div>
+         </div>
+      </section>
+      <section class="section readygo">
+         <div class="readygo-title container text-green-h2">
+            <h2>What <span>ready-to-go</span> tools will you setup after fast diagnostics?</h2>
+         </div>
+         <div class="readygo-container container">
+            <div class="readygo-item">
+               <h2>Website or online store for sales</h2>
+               <p>Create a functional website or online store in a few clicks using AI-powered builder.</p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+180%</h4>
+                     <h5>to your <br>
+                        sales</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-1.webp" alt="Website or online store for sales">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Online chat for your website</h2>
+               <p>Add an AI consultant to your site who works 24/7 and is trained on your data.</p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+35%</h4>
+                     <h5>to your <br>
+                        conversion</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-2.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Generate images content with AI</h2>
+               <p>Transform ideas into tailored images instantly with AI Image, ensuring a perfect fit for every
+                  project.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+40%</h4>
+                     <h5>to your <br>
+                        time</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-3.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Generate human-like copy with AI</h2>
+               <p>Produce top-tier copy across 100+ use-cases, drawing from industry best practices.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>x10</h4>
+                     <h5>times faster <br>
+                        all copy tasks</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-4.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Setup website for Google Search</h2>
+               <p>Analyze all pages and content, find errors and setup recommendations to improve SEO positions.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+70%</h4>
+                     <h5>to your <br>
+                        free leads</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-5.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Documents special for your situation</h2>
+               <p>Create a variety of documents like audience analyses, emails, contact, scripts and more.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>x10</h4>
+                     <h5>times faster <br>
+                        ducoments copy</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-6.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Setup conversional tools for website</h2>
+               <p>Grow your business to profitability with high conversion rate tools that expand your audience and
+                  sales.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+70%</h4>
+                     <h5>to your <br>
+                        conversion</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-7.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Setup email marketing & AI inbox</h2>
+               <p>Using emails to keep in touch with customers is key for growing your online business successfully.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+80%</h4>
+                     <h5>to your <br>
+                        sales</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-8.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Setup your smart clients-system</h2>
+               <p>Process requests using a convenient CRM, automate actions and transfer from requests to customers.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+70%</h4>
+                     <h5>to your <br>
+                        sales</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-9.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Create customer base for contacts</h2>
+               <p>Segment customers, gather info on their activity, purchases, behavior, and send newsletters.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+70%</h4>
+                     <h5>to your <br>
+                        sales</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-10.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Track website & e-com analytics</h2>
+               <p>Collect detailed analytics on your site and orders, create UTM and track traffic.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+30%</h4>
+                     <h5>to your <br>
+                        growing</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-11.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+            <div class="readygo-item">
+               <h2>Create AI chat and train on your data</h2>
+               <p>Your personal AI chat for your business that is trained on your business data and work 24/7.
+               </p>
+               <div>
+                  <div class="readygo-number">
+                     <h4>+60%</h4>
+                     <h5>saved <br>
+                        time</h5>
+                  </div>
+               </div>
+               <div class="readygo-img">
+                  <img src="./img/diagnostic/readygo-img-12.webp" alt="Online chat for your website">
+
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section additional">
+         <div class="additional-title container text-green-h2">
+            <h2>Additional <span>materials and bonus</span> after diagnostics</h2>
+         </div>
+         <div class="additional-container container">
+            <div class="additional-item">
+               <img src="./img/diagnostic/additional-img-1.webp" alt="">
+               <p>Personal <span>real AI specialist</span> for all you tasks</p>
+            </div>
+            <div class="additional-item">
+               <img src="./img/diagnostic/additional-img-2.webp" alt="">
+               <p>Coupon <span>for 50%</span> off for Weady AI tools</p>
+            </div>
+            <div class="additional-item">
+               <img src="./img/diagnostic/additional-img-3.webp" alt="">
+               <p>Course how to integrate AI in business <span>like a pro</span> </p>
+            </div>
+         </div>
+      </section>
+      <section class="section grow-faster">
+         <div class="grow-faster-container container">
+            <div class="grow-faster-text">
+               <h3>FREE CONSULTATION</h3>
+               <h2>Grow 10x faster tommorow</h2>
+               <p>After free diagnostics with a step-by-step plan and ready to use AI-powered tools. </p>
+               <a href="#"
+                  class="btn orange-button px-5 py-standart fw-700 standart-height-button adv-attr-button mt-3 position-relative "
+                  style="z-index: 3;">Start free diagnostics</a>
+            </div>
+            <div class="grow-faster-img">
+               <img src="./img/diagnostic/grow-faster-img.webp" alt="">
+            </div>
+            <a href="#"
+               class="btn orange-button px-5 py-standart fw-700 standart-height-button adv-attr-button mt-3 position-relative grow-faster-none"
+               style="z-index: 3;">Start free diagnostics</a>
+         </div>
+      </section>
+      <section class="section ai-assistant">
+         <div class="ai-assistant-container container">
+            <div class="ai-assistant-orange">
+               <div class="ai-assistant-text">
+                  <h2>You are <img class="ai-assistant-img-mobile-mask" src="./img/diagnostic/mask.webp" alt="">
+                     accompanied
+                     by a
+                     personal AI-assistant</h2>
+                  <h3>Who helps and supports you throughout the class who helps and supports you throughout the class
+                     and after</h3>
+
+                  <h4>We speak in messengers:</h4>
+                  <div class="ai-assistant-social">
+                     <a class="ai-assistant-social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                           <path
+                              d="M1.4658e-06 16.0579V1.82736C1.4658e-06 1.32483 0.176401 0.894491 0.529201 0.53633C0.882001 0.178168 1.3056 -0.000607567 1.8 1.55123e-06H16.2C16.695 1.55123e-06 17.1189 0.179082 17.4717 0.537244C17.8245 0.895405 18.0006 1.32544 18 1.82736V12.7915C18 13.294 17.8236 13.7243 17.4708 14.0825C17.118 14.4407 16.6944 14.6194 16.2 14.6188H3.6L1.53 16.7203C1.245 17.0096 0.918601 17.0745 0.550801 16.9149C0.183001 16.7553 -0.000598534 16.4696 1.4658e-06 16.0579ZM1.8 13.865L2.8575 12.7915H16.2V1.82736H1.8V13.865Z"
+                              fill="white" />
+                        </svg>
+                        <p>ONLINE CHAT</p>
+                     </a>
+                     <a class="ai-assistant-social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                           <path
+                              d="M19.6482 3.49206C18.5886 2.38078 17.3265 1.49967 15.9355 0.90013C14.5444 0.300592 13.0523 -0.00537612 11.5462 7.14833e-05C5.23568 7.14833e-05 0.0924625 5.34005 0.0924625 11.892C0.0924625 13.992 0.624121 16.032 1.61809 17.832L0 24L6.06784 22.344C7.74372 23.292 9.62764 23.796 11.5462 23.796C17.8568 23.796 23 18.456 23 11.904C23 8.72405 21.8095 5.73605 19.6482 3.49206ZM11.5462 21.78C9.83568 21.78 8.1598 21.3 6.69196 20.4L6.34523 20.184L2.7392 21.168L3.69849 17.52L3.46734 17.148C2.51699 15.5724 2.01237 13.7511 2.01105 11.892C2.01105 6.44405 6.28744 2.00407 11.5347 2.00407C14.0774 2.00407 16.4698 3.03606 18.2613 4.90806C19.1483 5.82481 19.8513 6.91525 20.3294 8.11616C20.8076 9.31707 21.0514 10.6046 21.0467 11.904C21.0698 17.352 16.7935 21.78 11.5462 21.78ZM16.7703 14.388C16.4814 14.244 15.0714 13.524 14.8171 13.416C14.5513 13.32 14.3663 13.272 14.1698 13.56C13.9734 13.86 13.4301 14.532 13.2683 14.724C13.1065 14.928 12.9332 14.952 12.6442 14.796C12.3553 14.652 11.4307 14.328 10.3442 13.32C9.48894 12.528 8.92261 11.556 8.74924 11.256C8.58744 10.956 8.72613 10.8 8.87638 10.644C9.00352 10.512 9.16533 10.296 9.30402 10.128C9.44271 9.96004 9.5005 9.82804 9.59296 9.63604C9.68543 9.43204 9.63919 9.26404 9.56985 9.12004C9.5005 8.97605 8.92261 7.51205 8.69146 6.91205C8.4603 6.33605 8.21759 6.40805 8.04422 6.39605H7.48945C7.29296 6.39605 6.99246 6.46805 6.72663 6.76805C6.47236 7.06805 5.73266 7.78805 5.73266 9.25204C5.73266 10.716 6.76131 12.132 6.9 12.324C7.03869 12.528 8.92261 15.528 11.7889 16.812C12.4709 17.124 13.0025 17.304 13.4186 17.436C14.1005 17.664 14.7246 17.628 15.2216 17.556C15.7764 17.472 16.9206 16.836 17.1518 16.14C17.3945 15.444 17.3945 14.856 17.3136 14.724C17.2327 14.592 17.0593 14.532 16.7703 14.388Z"
+                              fill="white" />
+                        </svg>
+                        <p>WHATSAPP</p>
+                     </a>
+                     <a class="ai-assistant-social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                           <path
+                              d="M19.4909 0.369767C19.2859 0.187563 19.0377 0.0670261 18.7727 0.0209684C18.5077 -0.0250894 18.2357 0.00505298 17.9857 0.108192L0.93955 7.13196C0.640563 7.25147 0.38731 7.47078 0.218787 7.75612C0.0502646 8.04146 -0.0241838 8.37701 0.00690595 8.7111C0.034643 9.04506 0.164823 9.36058 0.377925 9.61036C0.591026 9.86013 0.875564 10.0307 1.18887 10.0965L5.51966 10.9975V16.6746C5.51951 16.9817 5.60632 17.282 5.76908 17.5373C5.93184 17.7925 6.16321 17.9913 6.43384 18.1084C6.61294 18.184 6.80405 18.2235 6.99712 18.2247C7.19117 18.2254 7.3834 18.1855 7.56257 18.1073C7.74174 18.0291 7.90425 17.9142 8.04057 17.7693L10.4414 15.2602L14.0704 18.6122C14.3383 18.8601 14.6828 18.9978 15.04 18.9997C15.1971 19.0031 15.3535 18.9769 15.5017 18.9222C15.7454 18.8413 15.9647 18.6951 16.138 18.498C16.3113 18.3009 16.4326 18.0597 16.4898 17.7984L19.9618 1.89078C20.0225 1.61628 20.0107 1.32963 19.9277 1.06163C19.8447 0.793637 19.6937 0.554442 19.4909 0.369767ZM6.08294 9.53457L1.48436 8.57547L14.3752 3.25678L6.08294 9.53457ZM6.99712 16.6746V12.0825L9.32411 14.2332L6.99712 16.6746ZM15.0493 17.4496L7.44035 10.4259L18.4012 2.12329L15.0493 17.4496Z"
+                              fill="white" />
+                        </svg>
+                        <p>TELEGRAM</p>
+                     </a>
+                     <a class="ai-assistant-social-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 12 11" fill="none">
+                           <path
+                              d="M11.0227 4.25469C11.211 4.20868 11.3801 4.08864 11.5017 3.91464C11.6233 3.74064 11.69 3.52323 11.6907 3.29873V1.78868C11.6907 1.5303 11.6027 1.2825 11.4461 1.0998C11.2895 0.917095 11.0771 0.814453 10.8557 0.814453H0.835052C0.613582 0.814453 0.401183 0.917095 0.244581 1.0998C0.0879784 1.2825 0 1.5303 0 1.78868V3.29873C0.000695539 3.52323 0.0674154 3.74064 0.189008 3.91464C0.310601 4.08864 0.4797 4.20868 0.668041 4.25469C0.950082 4.32293 1.20335 4.50249 1.38517 4.76312C1.567 5.02376 1.66627 5.34954 1.66627 5.68559C1.66627 6.02164 1.567 6.34742 1.38517 6.60805C1.20335 6.86869 0.950082 7.04824 0.668041 7.11648C0.4797 7.1625 0.310601 7.28253 0.189008 7.45653C0.0674154 7.63053 0.000695539 7.84795 0 8.07244V9.58249C0 9.84087 0.0879784 10.0887 0.244581 10.2714C0.401183 10.4541 0.613582 10.5567 0.835052 10.5567H10.8557C11.0771 10.5567 11.2895 10.4541 11.4461 10.2714C11.6027 10.0887 11.6907 9.84087 11.6907 9.58249V8.07244C11.69 7.84795 11.6233 7.63053 11.5017 7.45653C11.3801 7.28253 11.211 7.1625 11.0227 7.11648C10.7406 7.04824 10.4874 6.86869 10.3055 6.60805C10.1237 6.34742 10.0244 6.02164 10.0244 5.68559C10.0244 5.34954 10.1237 5.02376 10.3055 4.76312C10.4874 4.50249 10.7406 4.32293 11.0227 4.25469ZM0.835052 8.07244C1.30698 7.96064 1.73126 7.66194 2.03601 7.22694C2.34077 6.79194 2.50725 6.2474 2.50725 5.68559C2.50725 5.12377 2.34077 4.57923 2.03601 4.14423C1.73126 3.70924 1.30698 3.41053 0.835052 3.29873V1.78868H3.75773V9.58249H0.835052V8.07244ZM10.8557 8.07244V9.58249H4.59278V1.78868H10.8557V3.29873C10.3837 3.41053 9.95946 3.70924 9.65471 4.14423C9.34996 4.57923 9.18347 5.12377 9.18347 5.68559C9.18347 6.2474 9.34996 6.79194 9.65471 7.22694C9.95946 7.66194 10.3837 7.96064 10.8557 8.07244Z"
+                              fill="white" />
+                        </svg>
+                        <p>TICKET SYSTEM</p>
+                     </a>
+                  </div>
+               </div>
+               <div class="ai-assistant-img">
+                  <img class="ai-assistant-img-pc" src="./img/human.webp" alt="">
+                  <img class="ai-assistant-img-mobile" src="./img/human-mobile.webp" alt="">
+               </div>
+            </div>
+            <div class="ai-assistant-green">
+               <h2>You'll get support with: </h2>
+               <div class="ai-assistant-green-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Explains that you don't understand</p>
+               </div>
+               <div class="ai-assistant-green-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Answers questions</p>
+               </div>
+               <div class="ai-assistant-green-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Provides feedback</p>
+               </div>
+               <div class="ai-assistant-green-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Leads by example</p>
+               </div>
+               <div class="ai-assistant-green-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2643L16.1973 7.18728C16.3946 6.96738 16.6457 6.85742 16.9507 6.85742C17.2556 6.85742 17.5067 6.96738 17.704 7.18728C17.9013 7.40719 18 7.68708 18 8.02693C18 8.36679 17.9013 8.64668 17.704 8.86659L10.6009 16.7833C10.3856 17.0232 10.1345 17.1431 9.84753 17.1431C9.56054 17.1431 9.30942 17.0232 9.09417 16.7833L6.29596 13.6646C6.09865 13.4447 6 13.1648 6 12.8249C6 12.4851 6.09865 12.2052 6.29596 11.9853C6.49327 11.7654 6.74439 11.6554 7.04933 11.6554C7.35426 11.6554 7.60538 11.7654 7.80269 11.9853L9.84753 14.2643Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Configures your panel to work</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section for-free">
+         <div class="container for-free-container">
+            <div class="for-free-text">
+               <h2>Not sure how to start?
+                  Get diagnosed for free!</h2>
+               <div class="for-free-item">
+                  <div>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <g style="mix-blend-mode:lighten">
+                           <circle cx="12" cy="12.0039" r="12" fill="white" />
+                        </g>
+                        <path
+                           d="M9.84753 14.2682L16.1973 7.19119C16.3946 6.97128 16.6457 6.86133 16.9507 6.86133C17.2556 6.86133 17.5067 6.97128 17.704 7.19119C17.9013 7.4111 18 7.69098 18 8.03084C18 8.3707 17.9013 8.65058 17.704 8.87049L10.6009 16.7872C10.3856 17.0271 10.1345 17.147 9.84753 17.147C9.56054 17.147 9.30942 17.0271 9.09417 16.7872L6.29596 13.6685C6.09865 13.4486 6 13.1687 6 12.8288C6 12.489 6.09865 12.2091 6.29596 11.9892C6.49327 11.7693 6.74439 11.6593 7.04933 11.6593C7.35426 11.6593 7.60538 11.7693 7.80269 11.9892L9.84753 14.2682Z"
+                           fill="#FD804C" />
+                     </svg>
+                  </div>
+
+                  <p>Let's analyze the current situation according to 52 parameters</p>
+
+               </div>
+
+               <div class="for-free-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12.0039" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2682L16.1973 7.19119C16.3946 6.97128 16.6457 6.86133 16.9507 6.86133C17.2556 6.86133 17.5067 6.97128 17.704 7.19119C17.9013 7.4111 18 7.69098 18 8.03084C18 8.3707 17.9013 8.65058 17.704 8.87049L10.6009 16.7872C10.3856 17.0271 10.1345 17.147 9.84753 17.147C9.56054 17.147 9.30942 17.0271 9.09417 16.7872L6.29596 13.6685C6.09865 13.4486 6 13.1687 6 12.8288C6 12.489 6.09865 12.2091 6.29596 11.9892C6.49327 11.7693 6.74439 11.6593 7.04933 11.6593C7.35426 11.6593 7.60538 11.7693 7.80269 11.9892L9.84753 14.2682Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Define points of growth</p>
+
+               </div>
+               <div class="for-free-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                     <g style="mix-blend-mode:lighten">
+                        <circle cx="12" cy="12.0039" r="12" fill="white" />
+                     </g>
+                     <path
+                        d="M9.84753 14.2682L16.1973 7.19119C16.3946 6.97128 16.6457 6.86133 16.9507 6.86133C17.2556 6.86133 17.5067 6.97128 17.704 7.19119C17.9013 7.4111 18 7.69098 18 8.03084C18 8.3707 17.9013 8.65058 17.704 8.87049L10.6009 16.7872C10.3856 17.0271 10.1345 17.147 9.84753 17.147C9.56054 17.147 9.30942 17.0271 9.09417 16.7872L6.29596 13.6685C6.09865 13.4486 6 13.1687 6 12.8288C6 12.489 6.09865 12.2091 6.29596 11.9892C6.49327 11.7693 6.74439 11.6593 7.04933 11.6593C7.35426 11.6593 7.60538 11.7693 7.80269 11.9892L9.84753 14.2682Z"
+                        fill="#FD804C" />
+                  </svg>
+
+                  <p>Select a suitable set of AI Tools</p>
+
+               </div>
+
+               <a href="support.html"
+                  class="btn white-button px-5 adv-attr-button my-3 py-standart standart-height-button">Start free
+                  diagnostics</a>
+            </div>
+            <div class="for-free-img">
+               <img src="./img/diagnostic/for-free-img.webp" alt="for-free">
+            </div>
+
+
+
+         </div>
+      </section>
+
+
+      <!-- Footer start -->
+      <footer class="container pt-5 pt-lg-5 text-center text-lg-start">
+         <div class="d-flex justify-content-between flex-column flex-lg-row mb-0 mb-lg-2">
+            <div class="mb-4 mx-auto mx-lg-0 logo-footer">
+               <!--<img src="img/logo/logo-green-big.webp" alt="logo" width="185" class="mb-4 mx-auto mx-lg-0 logo-footer">-->
+               <img src="img/logo/weady-green-logo.svg" alt="logo" width="185" class="mb-4 mx-auto mx-lg-0 logo-footer">
+            </div>
+            <div class="mb-4 soc-networks d-flex justify-content-between mx-auto mx-lg-0">
+               <a href="https://www.linkedin.com/company/weady-ai/" target="_blank">
+                  <i class="bi bi-linkedin"></i>
+               </a>
+               <a href="https://www.facebook.com/profile.php?id=100091060951784" target="_blank">
+                  <i class="bi bi-facebook"></i>
+               </a>
+               <a href="https://t.me/+KcniCybbf5hjMmEy" target="_blank">
+                  <i class="bi bi-telegram"></i>
+               </a>
+               <a href="https://instagram.com/weady.ai" target="_blank" <i class="bi bi-instagram"></i>
+               </a>
+               <a href="https://tiktok.com/@weady.ai" target="_blank">
+                  <i class="bi bi-tiktok"></i>
+               </a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 text-center text-lg-start">
+               <div class="links-block d-flex flex-column mb-4">
+                  <p>Our package</p>
+                  <a href="business.html">Business</a>
+                  <a href="business_plus.html">Business Plus</a>
+                  <a href="econom.html">E-commerce</a>
+                  <a href="variants.html">All features</a>
+               </div>
+               <div class="links-block d-flex flex-column mb-4">
+                  <p>Get help</p>
+                  <a href="support.html">Support</a>
+                  <a href="guides.html">Knowledge base</a>
+                  <a href="community.html">Our community</a>
+                  <a href="course.html">Getting Started Course</a>
+                  <a href="demo.html">Fast demo</a>
+                  <a href="docs.html">Docs</a>
+               </div>
+            </div>
+            <div class="col-lg-4 text-center">
+               <div class="links-block d-flex flex-column mb-4">
+                  <p>Products</p>
+                  <a href="builder.html">AI Website Builder</a>
+                  <a href="#">AI Website Assistant</a>
+                  <a href="#">AI Support Service</a>
+                  <a href="#">AI Marketing</a>
+                  <a href="#">AI Social Media</a>
+                  <a href="#">AI Messenger</a>
+                  <a href="#">Weady CRM</a>
+                  <a href="#">AI Blog Content</a>
+                  <a href="#">AI SEO Check</a>
+                  <a href="#">AI Team</a>
+               </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+               <div class="links-block d-flex flex-column mb-4">
+                  <p>Company</p>
+                  <a href="about.html">About us</a>
+                  <a href="/pricing">Pricing</a>
+                  <a href="partner_program.html">Affilate program</a>
+                  <a href="#">Press</a>
+                  <a href="reviews.html">Reviews</a>
+                  <a href="blog.html">Our blog</a>
+               </div>
+               <div class="links-block d-flex flex-column mb-4">
+                  <p>Other</p>
+                  <a href="#">Terms of Service</a>
+                  <a href="#">Privacy policy</a>
+                  <a href="#">Cookie policy</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Footer end -->
+
+
+   </main>
+
+
+
+
+   <!-- JS CODE -->
+   <script src="js/script.js" defer="defer"></script>
+   <script src="js/lang.js"></script>
+   <script src="js/diagnostic.js"></script>
+   <script src="https://player.vimeo.com/api/player.js"></script>
+</body>
